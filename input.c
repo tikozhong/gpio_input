@@ -59,7 +59,7 @@ static void inputPolling(INPUT_RSRC_T* pRsrc, u8 tick){
 * Return         : None
 *******************************************************************************/
 static s8 inputReadPin(INPUT_RSRC_T* pRsrc, u8 pin){
-	if(pin>=pRsrc->gpioLen)	return 1;
+	if(pin>=pRsrc->gpioLen)	return -1;
 	if(pRsrc->status[0] & BIT(pin))	return 1;
 	else return 0;
 }

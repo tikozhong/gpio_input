@@ -15,20 +15,14 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "misc.h"
-#include "input.h"
 
 /* Exported types ------------------------------------------------------------*/
-typedef enum{
-	INPUT_EVENT_FALLING	=	0,
-	INPUT_EVENT_RAISING	=	1,
-}INPUT_EVENT_T;
-
 /* Exported constants --------------------------------------------------------*/
-/* Exported macro ------------------------------------------------------------*/
 extern const char INPUT_HELP[];
-
+/* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
-u8 inputCmd(INPUT_DEV_T *dev, const char* CMD, u8 brdAddr, char* buff, u16 len);
+u8 inputCmd(void *dev, char* CMD, u8 brdAddr, void (*xprint)(const char* FORMAT_ORG, ...));
+
 #endif /* _INPUT_CMD_H */
 
 /******************* (C) COPYRIGHT 2015 INCUBECN *****END OF FILE****/
