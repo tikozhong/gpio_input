@@ -24,7 +24,7 @@ typedef enum{
 
 /* Private variables ---------------------------------------------------------*/
 const char INPUT_HELP[] = {
-	"input command:"
+	"input command: "
 	"\n %brd.%dev.help()"
 	"\n %brd.%dev.readPin()/(indx)/(indx0,indx1)"
 	"\n %brd.%dev.enableFalling()/(indx)"
